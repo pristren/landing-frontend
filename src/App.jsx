@@ -5,7 +5,7 @@ import second from "./assets/2.png";
 import third from "./assets/3.png";
 import { Progress } from "./components/ui/progress";
 import { AlignJustify } from "lucide-react";
-// import { Input } from "postcss";
+import logo from "./assets/logo.webp";
 
 function App() {
   const [progress, setProgress] = useState(13);
@@ -75,7 +75,7 @@ function App() {
           <div className="hidden lg:flex  gap-5 p-4 ">
             <img
               loading="lazy"
-              srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+              src={logo}
               className="aspect-[1.01] object-contain object-center w-[69px] overflow-hidden shrink-0 max-w-full"
             />
             <div className="flex justify-between w-full">
@@ -109,7 +109,7 @@ function App() {
           <div className="flex lg:hidden justify-between items-center py-4  gap-5 px-4 ">
             <img
               loading="lazy"
-              srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+              src={logo}
               className="aspect-[1.01] object-contain object-center w-[69px] overflow-hidden shrink-0 max-w-full"
             />
             <AlignJustify
