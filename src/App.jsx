@@ -4,6 +4,7 @@ import first from "./assets/1.png";
 import second from "./assets/2.png";
 import third from "./assets/3.png";
 import { Progress } from "./components/ui/progress";
+import { AlignJustify } from "lucide-react";
 // import { Input } from "postcss";
 
 function App() {
@@ -41,12 +42,13 @@ function App() {
       };
     }
   }, [progress]);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
       {!loading ? (
         <div className=" bg-white flex flex-col  p-0">
-          <div className=" flex w-full flex-col justify-center   items-start pb-3">
+          <div className=" flex w-full flex-col justify-center   items-start ">
             <div className="justify-between items-center flex w-full py-3 px-3 gap-5  max-md:flex-wrap bg-[#D5615F]">
               <div className="items-stretch flex gap-2 my-auto">
                 <img
@@ -70,7 +72,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className=" flex  gap-5 px-4 ">
+          <div className="hidden lg:flex  gap-5 p-4 ">
             <img
               loading="lazy"
               srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
@@ -104,7 +106,52 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="flex-col overflow-hidden relative flex min-h-[596px] w-full mt-2 px-20 py-12 max-md:max-w-full max-md:px-5">
+          <div className="flex lg:hidden justify-between items-center py-4  gap-5 px-4 ">
+            <img
+              loading="lazy"
+              srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc11eaebf05957f7b70085851f595f413899e686e20a948f0afb692eb88990a3?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+              className="aspect-[1.01] object-contain object-center w-[69px] overflow-hidden shrink-0 max-w-full"
+            />
+            <AlignJustify
+              onClick={() => {
+                setMenuOpen(!menuOpen);
+              }}
+              className="cursor-pointer"
+            />
+          </div>
+          {menuOpen && (
+            <div className="flex  lg:hidden py-4  gap-5 px-4 ">
+              <div className="flex flex-col justify-start items-start w-full">
+                <div className="items-center  flex flex-col justify-center gap-3 my-auto  ">
+                  <div className=" flex flex-col gap-3 my-auto space-y-1 ">
+                    <div className="text-lime-600 text-base font-semibold whitespace-nowrap">
+                      Inicio
+                    </div>
+                    <div className="text-neutral-500 text-base">
+                      ¿Cómo lo hacemos?
+                    </div>
+                    <div className="text-neutral-500 text-base">
+                      Solicita presupuesto
+                    </div>
+                    <div className="text-neutral-500 text-base">
+                      Quienes somos
+                    </div>
+                    <div className="text-neutral-500 text-base">
+                      Preguntas Frecuentes
+                    </div>
+                    <div className="text-neutral-500 text-base whitespace-nowrap pb-2">
+                      Contacto
+                    </div>
+                  </div>
+                </div>
+                <div className="text-white text-lg font-medium whitespace-nowrap   rounded w-full text-center px-14 py-5 max-md:px-5 bg-[#D5615F] ">
+                  CLIENTES
+                </div>
+              </div>
+            </div>
+          )}
+          {/* another */}
+          <div className="flex-col overflow-hidden relative flex min-h-[596px] w-full px-20 py-12 max-md:max-w-full max-md:px-5">
             <img
               loading="lazy"
               srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/fc6b8946310baa10d5af47e7bafebe2f3e8c45d2a95bb433736a6fa29a83ae84?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc6b8946310baa10d5af47e7bafebe2f3e8c45d2a95bb433736a6fa29a83ae84?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc6b8946310baa10d5af47e7bafebe2f3e8c45d2a95bb433736a6fa29a83ae84?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc6b8946310baa10d5af47e7bafebe2f3e8c45d2a95bb433736a6fa29a83ae84?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc6b8946310baa10d5af47e7bafebe2f3e8c45d2a95bb433736a6fa29a83ae84?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc6b8946310baa10d5af47e7bafebe2f3e8c45d2a95bb433736a6fa29a83ae84?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc6b8946310baa10d5af47e7bafebe2f3e8c45d2a95bb433736a6fa29a83ae84?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc6b8946310baa10d5af47e7bafebe2f3e8c45d2a95bb433736a6fa29a83ae84?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
@@ -127,8 +174,8 @@ function App() {
             ¿Qué es Happy Vecinos?
           </div>
           {/* start */}
-          <div className="flex px-5 lg:ps-12 gap-8 mt-5 h-full items-center">
-            <div className=" text-left w-2/4 h-auto">
+          <div className="flex flex-col lg:flex-row px-5 lg:ps-12 gap-8 mt-5 h-full items-center">
+            <div className=" text-left w-full lg:w-2/4 h-auto">
               <span className="font-medium text-[#D5615F]">
                 ¿QUIÉNES SOMOS?
               </span>{" "}
@@ -145,12 +192,12 @@ function App() {
                 residentes, asegurando una gestión transparente y eficiente.
               </p>
             </div>
-            <div className="flex justify-end w-2/4 items-center">
+            <div className="flex justify-end w-full lg:w-2/4 items-center">
               <img src={first} className="w-5/6 " alt="" />
             </div>
           </div>
-          <div className=" flex px-5 lg:pe-12 gap-8 mt-16 h-full items-center">
-            <div className="order-2 text-left w-2/4 h-auto">
+          <div className=" flex flex-col lg:flex-row px-5 lg:pe-12 gap-8 mt-16 h-full items-center">
+            <div className="order-2 text-left w-full lg:w-2/4 h-auto">
               <span className="font-medium text-[#D5615F]">
                 ¿QUÉ PUEDES CONSEGUIR?
               </span>{" "}
@@ -173,13 +220,13 @@ function App() {
                 <li>Control de Movimientos Financieros</li>
               </ul>
             </div>
-            <div className="order-1 flex justify-start w-2/4 items-center">
+            <div className="order-1 flex justify-start w-full lg:w-2/4 items-center">
               <img src={third} className="w-5/6 " alt="" />
             </div>
           </div>
-          <div className="flex px-5 lg:px-12 gap-8 mt-16 h-full items-center">
-            <div className=" text-left w-2/4 h-auto">
-              <span className="font-semibold text-4xl mt-2">
+          <div className="flex flex-col lg:flex-row px-5 lg:px-12 gap-8 mt-16 h-full items-center">
+            <div className=" text-left w-full lg:w-2/4 h-auto">
+              <span className="font-semibold text-2xl lg:text-3xl mt-2">
                 ¿Por qué Happy <br /> Vecinos?
               </span>{" "}
               <br />
@@ -193,31 +240,31 @@ function App() {
                 de comunidades.
               </p>
             </div>
-            <div className="flex justify-end w-2/4 items-center">
+            <div className="flex justify-end w-full lg:w-2/4 items-center">
               <img src={second} className="w-5/6 " alt="" />
             </div>
           </div>
           {/* anotehr */}
-          <div className="text-black text-3xl font-light leading-[49px] self-center px-16 mt-48 max-md:max-w-full">
-            CaracterísticasHappyVecinosAdministrador NormalPortal de
+          <div className="text-black text-xl lg:text-3xl font-light leading-[49px]  px-5 lg:px-12 mt-48 max-md:max-w-full">
+            Características Happy Vecinos Administrador NormalPortal de
             SeguimientosSí, con seguimiento de incidencias en el ascensor.No
-            existe.NotificacionesNotificaciones por WhatsApp sobre
-            incidencias.Como mucho, notificaciones por correo.Reuniones con
-            Account ManagerTrimestrales para buscar proveedores más
-            económicos.Las juntas pueden costar 1000€.CostoPrecios ajustados por
-            vivienda (dejar 3 huecos para especificar).Costo estándar de
-            33,000€/anual entre administradores.Gestión de EmergenciasCentralita
-            disponible y contacto con account manager de 09.00h a 18.00h.Solo
-            contacto con el administrador.Seguimiento en Tiempo RealSeguimiento
-            en tiempo real de las cuentas de la comunidad.Necesidad de asistir a
-            juntas para conocer las cuentas.Adaptación TecnológicaTrabajando en
-            autoconsumo y soluciones energéticas a través del portal de
-            “energía”.No se adaptan a la tecnología.
+            existe. Notificaciones por WhatsApp sobre incidencias.Como mucho,
+            notificaciones por correo.Reuniones con Account ManagerTrimestrales
+            para buscar proveedores más económicos.Las juntas pueden costar
+            1000€.CostoPrecios ajustados por vivienda (dejar 3 huecos para
+            especificar).Costo estándar de 33,000€/anual entre
+            administradores.Gestión de EmergenciasCentralita disponible y
+            contacto con account manager de 09.00h a 18.00h.Solo contacto con el
+            administrador.Seguimiento en Tiempo RealSeguimiento en tiempo real
+            de las cuentas de la comunidad.Necesidad de asistir a juntas para
+            conocer las cuentas.Adaptación TecnológicaTrabajando en autoconsumo
+            y soluciones energéticas a través del portal de “energía”.No se
+            adaptan a la tecnología.
           </div>
           <div className="text-black text-4xl font-semibold leading-[49.2px] self-center whitespace-nowrap mt-16 ">
             ¿Cómo lo hacemos?
           </div>
-          <div className="text-black text-3xl font-light leading-[49px] self-center px-16 mt-10 max-md:max-w-full ">
+          <div className="text-black text-xl lg:text-3xl font-light leading-[49px] self-center px-5 lg:px-12 mt-10 max-md:max-w-full ">
             ¿Cómo lo hacemos en Happy Vecinos?
             <br />
             Innovación en Gestión Comunitaria: En Happy Vecinos revolucionamos
@@ -300,7 +347,7 @@ function App() {
             <AccordionDemo />
           </div>
 
-          <div className="items-center  mt-24 flex max-w-[600px] mx-auto flex-col">
+          <div className="items-center  mt-24 flex max-w-[600px] mx-auto flex-col px-5 lg:px-0">
             <div className="text-black text-4xl font-semibold leading-10 self-stretch w-full max-md:max-w-full">
               Conoce más sobre nosotros{" "}
             </div>
