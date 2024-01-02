@@ -6,6 +6,10 @@ import third from "./assets/3.png";
 import { Progress } from "./components/ui/progress";
 import { AlignJustify } from "lucide-react";
 import logo from "./assets/logo.webp";
+import Seven from "./components/seven/Seven";
+import Eleven from "./components/eleven/Eleven";
+import Fourteen from "./components/fourteen/Fourteen";
+import TwentyFour from "./components/twentyFour/TwentyFour";
 
 function App() {
   const [progress, setProgress] = useState(13);
@@ -150,6 +154,10 @@ function App() {
               </div>
             </div>
           )}
+          <Seven />
+          <Eleven />
+          <Fourteen />
+          <TwentyFour />
           {/* another */}
           <div className="flex-col overflow-hidden relative flex min-h-[596px] w-full px-20 py-12 max-md:max-w-full max-md:px-5">
             <img
@@ -346,7 +354,6 @@ function App() {
           <div className="px-10 mt-8">
             <AccordionDemo />
           </div>
-
           <div className="items-center  mt-24 flex max-w-[600px] mx-auto flex-col px-5 lg:px-0">
             <div className="text-black text-4xl font-semibold leading-10 self-stretch w-full max-md:max-w-full">
               Conoce más sobre nosotros{" "}
@@ -388,7 +395,6 @@ function App() {
               </a>
             </div>
           </div>
-
           {/* footer */}
           <div className="bg-neutral-800 self-stretch flex w-full flex-col mt-40 px-5 py-7 max-md:max-w-full max-md:mt-10">
             <div className="items-stretch self-center flex w-full max-w-[1039px] justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
