@@ -11,13 +11,13 @@ const TwentyFour = () => {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-8 lg:gap-10">
         {/* review 1 */}
         <div className="shadow p-8">
-          <h3 className="text-xl font-semibold mb-10">
+          {/* <h3 className="text-xl font-semibold mb-10">
             Con diferencia el más agil y con mejor user experience
-          </h3>
+          </h3> */}
           <p className="text-gray-700 font-medium mb-8">
-            Como ERP &quot;generalista&quot; para la PYME es con diferencia el
-            más ágil y con mejor experiencia de usuario. Hay otras opciones,
-            pero a la hora de la verdad...
+            Una herramienta indispensable para la gestión comunitaria.
+            HappyVecinos ha simplificado nuestra contabilidad y comunicación.
+            ¡Imprescindible para cualquier administrador!
           </p>
 
           {/* rating icon  */}
@@ -70,19 +70,21 @@ const TwentyFour = () => {
           </div>
           {/* date  */}
           <div>
-            <h3 className="font-medium text-lg">Lucian</h3>
-            <p className="text-gray-700 font-medium">27 de febrero 2023</p>
+            <h3 className="font-medium text-lg">
+              Marta López, Administradora de &apos;Edificio Mirador
+            </h3>
+            {/* <p className="text-gray-700 font-medium">27 de febrero 2023</p> */}
           </div>
         </div>
         {/* review 2 */}
         <div className="shadow p-8">
-          <h3 className="text-xl font-semibold mb-10">
+          {/* <h3 className="text-xl font-semibold mb-10">
             Con diferencia el más agil y con mejor user experience
-          </h3>
+          </h3> */}
           <p className="text-gray-700 font-medium mb-8">
-            Como ERP &quot;generalista&quot; para la PYME es con diferencia el
-            más ágil y con mejor experiencia de usuario. Hay otras opciones,
-            pero a la hora de la verdad...
+            La experiencia de usuario es inmejorable. Con HappyVecinos, la
+            gestión de incidencias y reservas es más fácil que nunca. ¡Los
+            vecinos están encantados!
           </p>
 
           {/* rating icon  */}
@@ -135,19 +137,21 @@ const TwentyFour = () => {
           </div>
           {/* date  */}
           <div>
-            <h3 className="font-medium text-lg">Lucian</h3>
-            <p className="text-gray-700 font-medium">27 de febrero 2023</p>
+            <h3 className="font-medium text-lg">
+              José Fernández, Presidente de &apos;Residencial La Paz
+            </h3>
+            {/* <p className="text-gray-700 font-medium">27 de febrero 2023</p> */}
           </div>
         </div>
         {/* review 3 */}
         <div className="shadow p-8">
-          <h3 className="text-xl font-semibold mb-10">
+          {/* <h3 className="text-xl font-semibold mb-10">
             Con diferencia el más agil y con mejor user experience
-          </h3>
+          </h3> */}
           <p className="text-gray-700 font-medium mb-8">
-            Como ERP &quot;generalista&quot; para la PYME es con diferencia el
-            más ágil y con mejor experiencia de usuario. Hay otras opciones,
-            pero a la hora de la verdad...
+            El soporte y las funcionalidades de HappyVecinos han mejorado
+            significativamente el bienestar de nuestra comunidad. Es mucho más
+            que un software, es parte de nuestro día a día.
           </p>
 
           {/* rating icon  */}
@@ -200,8 +204,10 @@ const TwentyFour = () => {
           </div>
           {/* date  */}
           <div>
-            <h3 className="font-medium text-lg">Lucian</h3>
-            <p className="text-gray-700 font-medium">27 de febrero 2023</p>
+            <h3 className="font-medium text-lg">
+              Ana Gutiérrez, Miembro del Comité de &apos;Parque Sol
+            </h3>
+            {/* <p className="text-gray-700 font-medium">27 de febrero 2023</p> */}
           </div>
         </div>
       </div>

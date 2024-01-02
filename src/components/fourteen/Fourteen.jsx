@@ -8,92 +8,79 @@ import {
   Card,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useState } from "react";
 
 export default function Fourteen() {
+  const [type, setType] = useState("Mensual");
   return (
     <div className="bg-white p-8 container">
       <div className="text-center">
+        <div className="space-y-6 mb-8">
+          <p>¿No te decides? Habla con el equipo de Ventas: </p>
+          <p className="">+34 684 083 197</p>
+        </div>
         <h1 className="text-4xl font-bold">Empieza tu prueba gratis</h1>
         <p className="text-lg mt-2">
-          Prueba Holded gratis durante 14 días. No necesitas tarjeta de crédito.
+          Prueba Happy Vecinos gratis durante 14 días. No necesitas tarjeta de
+          crédito.
         </p>
         <div className="flex justify-center gap-2 mt-6 bg-gray-200 w-min mx-auto py-1 px-1 rounded-xl">
-          <Button className="bg-white px-6 hover:bg-white text-primary">
-            Empresas
+          <Button
+            className={`${
+              type === "Mensual"
+                ? "bg-white hover:bg-white text-primary"
+                : "hover:bg-white"
+            }  px-6 `}
+            variant="ghost"
+            onClick={() => setType("Mensual")}
+          >
+            Mensual
           </Button>
-          <Button className="px-6 hover:bg-white" variant="ghost">
-            Autónomos
-          </Button>
-          <Button className="px-6 hover:bg-white" variant="ghost">
-            Asesorías
+          <Button
+            className={`${
+              type === "Anual"
+                ? "bg-white hover:bg-white text-primary"
+                : "hover:bg-white"
+            }  px-6 `}
+            variant="ghost"
+            onClick={() => setType("Anual")}
+          >
+            Anual
           </Button>
         </div>
       </div>
-      <div className="grid grid-cols-4 gap-8 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
         <Card className="w-full">
           <CardHeader>
-            <CardTitle>Básico</CardTitle>
+            <CardTitle>Básico – Comunidad Conectada</CardTitle>
             <CardDescription>
-              Simplifica la gestión de tu negocio con las funciones esenciales.
+              Simplifica la gestión de tu comunidad con las funciones
+              esenciales.
             </CardDescription>
           </CardHeader>
           <CardContent>
             <p className="text-4xl font-bold">
-              <span className="text-xl text-gray-500 line-through">29€</span>{" "}
-              <br />
-              14,5€ / <span className="text-xl text-gray-600">mes</span>{" "}
+              {type === "Mensual" ? 30 : 300} € por mes{" "}
+              <span className="text-xl text-gray-600">/piso</span>{" "}
             </p>
-            <p className="mt-1">Durante 3 meses</p>
-            <Button className="mt-4  bg-primary w-full">Empieza gratis</Button>
-            <ul className="mt-4">
-              <li>✔ 1.000 facturas al año</li>
-              <li>✔ 100 escaneos gratis al año</li>
-              <li>✔ 2 usuarios + tu asesoría</li>
-              <li>✔ 5 bancos sincronizados</li>
+
+            <Button className="my-4  bg-primary w-full">Empieza gratis</Button>
+            <p className="text-md font-semibold">Funcionalidades incluidas:</p>
+            <ul className="mt-2">
+              <li>✔ 200 incidencias gestionadas al año</li>
+              <li>✔ 50 reservas de espacios comunes al año</li>
+              <li>✔ Gestión de hasta 10 proveedores</li>
+              <li>✔ Soporte para 2 administradores de la comunidad</li>
             </ul>
           </CardContent>
           <CardFooter>
             <div className="text-sm mt-4">
-              <p>INCLUYE</p>
+              <p>Incluye</p>
               <ul className="list-disc pl-5">
-                <li>Facturación y gastos</li>
-                <li>Cashflow</li>
-                <li>CRM</li>
-                <li>Gestión de proyectos</li>
-              </ul>
-            </div>
-          </CardFooter>
-        </Card>
-        <Card className="w-full">
-          <CardHeader>
-            <CardTitle>Estándar</CardTitle>
-            <CardDescription>
-              Automatiza tus procesos contables y asigna roles predefinidos.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="text-4xl font-bold">
-              <span className="text-xl text-gray-500 line-through">29€</span>{" "}
-              <br />
-              14,5€ / <span className="text-xl text-gray-600">mes</span>{" "}
-            </p>
-            <p className="mt-1">Durante 3 meses</p>
-            <Button className="mt-4  bg-primary w-full">Empieza gratis</Button>
-            <ul className="mt-4">
-              <li>✔ 3.000 facturas al año</li>
-              <li>✔ 300 escaneos gratis al año</li>
-              <li>✔ 4 usuarios + tu asesoría</li>
-              <li>✔ Bancos sincronizados ilimitados</li>
-            </ul>
-          </CardContent>
-          <CardFooter>
-            <div className="text-sm mt-4">
-              <p>INCLUYE</p>
-              <ul className="list-disc pl-5">
-                <li>Facturación y gastos</li>
-                <li>Cashflow</li>
-                <li>CRM</li>
-                <li>Gestión de proyectos</li>
+                <li>Directorio de vecinos y proveedores</li>
+                <li>Calendario de eventos comunitarios</li>
+                <li>Gestión básica de cuotas y pagos</li>
+                <li>Archivo digital de juntas y documentos</li>
               </ul>
             </div>
           </CardFooter>
@@ -101,7 +88,7 @@ export default function Fourteen() {
         <Card className="w-full">
           <CardHeader>
             <div className="flex justify-between">
-              <CardTitle>Avanzado</CardTitle>
+              <CardTitle>Avanzado – Gestión Avanzada</CardTitle>
               <Badge
                 className="ml-2 text-primary bg-blue-100"
                 variant="secondary"
@@ -110,66 +97,69 @@ export default function Fourteen() {
               </Badge>
             </div>
             <CardDescription>
-              Profesionaliza tus comunicaciones y personaliza roles.
+              Automatiza y optimiza la gestión de tu comunidad con herramientas
+              mejoradas.
             </CardDescription>
           </CardHeader>
           <CardContent>
             <p className="text-4xl font-bold">
-              <span className="text-xl text-gray-500 line-through">29€</span>{" "}
-              <br />
-              14,5€ / <span className="text-xl text-gray-600">mes</span>{" "}
+              {type === "Mensual" ? 50 : 500}€ por mes{" "}
+              <span className="text-xl text-gray-600">/piso</span>{" "}
             </p>
-            <p className="mt-1">Durante 3 meses</p>
-            <Button className="mt-4  bg-primary w-full">Empieza gratis</Button>
-            <ul className="mt-4">
-              <li>✔ 10.000 facturas al año</li>
-              <li>✔ 800 escaneos gratis al año</li>
-              <li>✔ 7 usuarios + tu asesoría</li>
-              <li>✔ Bancos sincronizados ilimitados</li>
+
+            <Button className="my-4  bg-primary w-full">Empieza gratis</Button>
+            <p className="text-md font-semibold">Funcionalidades incluidas:</p>
+            <ul className="mt-2">
+              <li>✔ Incidencias ilimitadas</li>
+              <li>✔ Reservas ilimitadas de espacios comunes</li>
+              <li>✔ Gestión de hasta 50 proveedores</li>
+              <li>✔ Soporte para 5 administradores de la comunidad</li>
             </ul>
           </CardContent>
           <CardFooter>
             <div className="text-sm mt-4">
-              <p>INCLUYE</p>
+              <p>Incluye</p>
               <ul className="list-disc pl-5">
-                <li>Facturación y gastos</li>
-                <li>Cashflow</li>
-                <li>CRM</li>
-                <li>Gestión de proyectos</li>
+                <li>Todo lo del plan Básico proveedores</li>
+                <li>Herramientas avanzadas de gestión de incidencias</li>
+                <li>Sistema de votación y encuestas</li>
+                <li>Integración con servicios externos</li>
               </ul>
             </div>
           </CardFooter>
         </Card>
+
         <Card className="w-full">
           <CardHeader>
-            <CardTitle>Premium</CardTitle>
+            <div className="flex justify-between">
+              <CardTitle>Premium – Administración Integral</CardTitle>
+            </div>
             <CardDescription>
-              Gestiona con facturación ilimitada y un account manager exclusivo.
+              La solución completa para una gestión y comunicación sin
+              precedentes en tu comunidad.
             </CardDescription>
           </CardHeader>
           <CardContent>
             <p className="text-4xl font-bold">
-              <span className="text-xl text-gray-500 line-through">29€</span>{" "}
-              <br />
-              14,5€ / <span className="text-xl text-gray-600">mes</span>{" "}
+              {type === "Mensual" ? 70 : 700}€ por mes{" "}
+              <span className="text-xl text-gray-600">/piso</span>{" "}
             </p>
-            <p className="mt-1">Durante 3 meses</p>
-            <Button className="mt-4 bg-primary w-full">Empieza gratis</Button>
+            <Button className="mt-4  bg-primary w-full">Empieza gratis</Button>
             <ul className="mt-4">
-              <li>✔ Facturas ilimitadas</li>
-              <li>✔ 1.500 escaneos gratis al año</li>
-              <li>✔ 15 usuarios + tu asesoría</li>
-              <li>✔ Bancos sincronizados ilimitados</li>
+              <li>✔ Todas las funcionalidades son ilimitadas</li>
+              <li>✔ Gestión de cualquier número de proveedores</li>
+              <li>✔ Soporte para un número ilimitado de administradores</li>
             </ul>
           </CardContent>
           <CardFooter>
             <div className="text-sm mt-4">
               <p>INCLUYE</p>
               <ul className="list-disc pl-5">
-                <li>Facturación y gastos</li>
-                <li>Cashflow</li>
-                <li>CRM</li>
-                <li>Gestión de proyectos</li>
+                <li>Todo lo del plan Avanzado</li>
+                <li>Portal personalizado para vecinos</li>
+                <li>Gestión financiera y presupuestaria avanzada</li>
+                <li>Asistencia y asesoría legal y contable</li>
+                <li>Soporte premium y atención prioritaria</li>
               </ul>
             </div>
           </CardFooter>

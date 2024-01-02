@@ -1,64 +1,65 @@
 export default function Eleven() {
   return (
-    <div className="flex flex-col items-center justify-center px-8 lg:px-24 py-8 my-12">
+    <div className="flex flex-col items-center justify-center px-8  py-8 my-12">
       <div className="flex flex-wrap lg:flex-nowrap justify-center gap-10 lg:gap-20  mt-8">
         <div className="">
-          <h2 className="text-2xl font-bold">TENEMOS MÁS</h2>
+          <h2 className="text-2xl font-bold">HAY MÁS PARA TI</h2>
           <p className="text-xl mt-2">Y eso no es todo...</p>
           <p className="mt-4">
-            Sea cual sea tu negocio, Holded tiene la herramienta que buscas.
+            HappyVecinos es más que gestión, es el núcleo de tu comunidad.
           </p>
         </div>
         <div className="flex flex-col">
           <div className="flex items-center">
             <CheckIcon className="text-green-500 mr-2" />
-            <h3 className="font-semibold">Soporte de múltiples divisas</h3>
+            <h3 className="font-semibold">Gestión de Reservas</h3>
           </div>
           <p className="mt-2">
-            Crea facturas en cualquier moneda cambiando la divisa en tus
-            configuraciones.
+            {" "}
+            Reserva áreas comunes y servicios en segundos, con un sistema que se
+            adapta a las necesidades de tu comunidad.
           </p>
           <div className="flex items-center mt-4">
             <CheckIcon className="text-green-500 mr-2" />
-            <h3 className="font-semibold">Cálculo de impuestos</h3>
+            <h3 className="font-semibold">Administración de Documentos</h3>
           </div>
           <p className="mt-2">
-            Elige qué impuesto quieres añadir a tus facturas y Holded hará las
-            cuentas por ti.
+            Acceso centralizado a todos los documentos comunitarios, desde actas
+            hasta reglamentos, en un solo lugar.
           </p>
           <div className="flex items-center mt-4">
             <CheckIcon className="text-green-500 mr-2" />
-            <h3 className="font-semibold">Gestión de nóminas</h3>
+            <h3 className="font-semibold">Comunicados Efectivos</h3>
           </div>
           <p className="mt-2">
-            Gestiona nóminas con toda la información que necesitas: salario
-            base, suplementos, IRPF, etc.
+            Envía avisos y notificaciones a toda la comunidad de manera
+            instantánea y efectiva.
           </p>
         </div>
         <div className="flex flex-col">
           <div className="flex items-center">
             <CheckIcon className="text-green-500 mr-2" />
-            <h3 className="font-semibold">Envío de presupuestos</h3>
+            <h3 className="font-semibold">Conectividad con Servicios</h3>
           </div>
           <p className="mt-2">
-            Prepara presupuestos y envíalos desde Holded para ser aprobados por
-            tu cliente.
+            Integra HappyVecinos con otros servicios y gestiona todo desde un
+            único punto de acceso.
           </p>
           <div className="flex items-center mt-4">
             <CheckIcon className="text-green-500 mr-2" />
-            <h3 className="font-semibold">Integraciones</h3>
+            <h3 className="font-semibold">Gestión de Cuotas</h3>
           </div>
           <p className="mt-2">
-            Conecta todas tus aplicaciones con Holded de forma sencilla a través
-            de la Holded Store.
+            Automatiza el cálculo y cobro de cuotas comunitarias, ahorrando
+            tiempo y mejorando la precisión.
           </p>
           <div className="flex items-center mt-4">
             <CheckIcon className="text-green-500 mr-2" />
-            <h3 className="font-semibold">Gestión de proformas</h3>
+            <h3 className="font-semibold">Encuestas y Votaciones</h3>
           </div>
           <p className="mt-2">
-            Personalízalas para que especifiquen los detalles sobre futuras
-            facturas con tus clientes.
+            Recoge la opinión de los vecinos y realiza votaciones en línea para
+            tomar decisiones rápidas y democráticas.
           </p>
         </div>
       </div>
