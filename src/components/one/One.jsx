@@ -14,9 +14,12 @@ export default function One() {
               comunitaria, accesible en todo momento y lugar
             </p>
             <div className="flex gap-2 mb-4">
-              <Button className="bg-blue-600 text-white hover:bg-blue-600 hover:text-white ">
+              <a
+                href="#contact"
+                className=" px-6 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-600 hover:text-white "
+              >
                 Contacta con nosotros
-              </Button>
+              </a>
               {/* <Button className="bg-white text-gray-600 border border-gray-300 shadow-sm">
                 Empieza gratis con Google
               </Button> */}

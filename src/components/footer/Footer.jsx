@@ -5,7 +5,7 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-[#1f2937] py-5 px-20 mt-10">
@@ -39,14 +39,14 @@ const Footer = () => {
         <ul className="space-y-3 mt-8 md:mt-0">
           <li className="text-[#69707e] font-medium">LEGAL</li>
           <li>
-            <a href="#" className="underline">
+            <a href="/cookies" className="underline">
               Política de cookies
             </a>
           </li>
           <li>
-            <Link to="/cookies" className="underline">
+            <a href="/cookies" className="underline">
               Política de privacidad <br /> Términos y condiciones
-            </Link>
+            </a>
           </li>
         </ul>
 

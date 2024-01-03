@@ -13,7 +13,7 @@ import { useState } from "react";
 export default function Fourteen() {
   const [type, setType] = useState("Mensual");
   return (
-    <div className="bg-white p-8 container" id="price">
+    <div className="bg-[#f9fafc] p-8 container" id="price">
       <div className="text-center">
         <div className="space-y-6 mb-8">
           <p>¿No te decides? Habla con el equipo de Ventas: </p>

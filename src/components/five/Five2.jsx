@@ -1,7 +1,7 @@
 import { FaQuoteLeft } from "react-icons/fa6";
 export default function Five2() {
   return (
-    <section className="py-20 px-10">
+    <section className="py-20 px-10 lg:px-0">
       <div className="min-h-80 lg:relative bg-[#0e234c]">
         <div className="md:pl-[50%] p-5 pt-[5%] flex items-center justify-center">
           <div>

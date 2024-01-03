@@ -15,8 +15,21 @@ import {
 import { Button } from "./components/ui/button";
 import logo from "./assets/img/image.png";
 import { Link } from "react-router-dom";
+// import { useEffect, useRef } from "react";
 
 const Cookies = () => {
+  // const secRef = useRef(null);
+
+  // useEffect(() => {
+  //   const scrollToTop = () => {
+  //     if (secRef.current) {
+  //       secRef.current.scrollIntoView();
+  //     }
+  //   };
+
+  //   // Scroll to top whenever the component is mounted or updated
+  //   scrollToTop();
+  // }, [secRef]);
   return (
     <>
       <nav className="bg-[#bd6260] py-4 sticky top-0 z-[999] text-white">
@@ -27,18 +40,18 @@ const Cookies = () => {
             </Link>
           </div>
           <div className="hidden md:flex items-center text-center ">
-            <Link className=" border-r-2 px-3 " href="/#">
+            <a className=" border-r-2 px-3 " href="/#">
               Funcionalidad
-            </Link>
-            <Link className=" border-r-2 px-3 " href="/#price">
+            </a>
+            <a className=" border-r-2 px-3 " href="/#price">
               Precios
-            </Link>
-            <Link className=" border-r-2 px-3 " href="#faq">
+            </a>
+            <a className=" border-r-2 px-3 " href="#faq">
               ¿En qué podemos ayudar?
-            </Link>
-            <Link className=" border-r-2 px-3 " to="/#contact">
+            </a>
+            <a className=" border-r-2 px-3 " to="/#contact">
               Conócenos
-            </Link>
+            </a>
           </div>
           <div className="flex items-center space-x-3">
             {/* <p className="  underline ">Español</p> */}
@@ -62,7 +75,10 @@ const Cookies = () => {
           </div>
         </div>
       </nav>
-      <section className="py-8 px-[8%] lg:px-[20%] text-[#777d8a] ">
+      <section
+        className="py-8 px-[8%] lg:px-[20%] text-[#777d8a] "
+        // ref={secRef}
+      >
         {/* title  */}
         <div className="text-center space-y-1">
           <h5 className="font-medium text-[#4181f9]">
@@ -238,7 +254,7 @@ const Cookies = () => {
           Comunidad de Propietarios
         </p>
 
-        <>
+        <div>
           <p className="text-black mt-8">HAutorizo a:</p>
           <p className="text-[#777d8a] mt-5">
             I. Happy Vecinos S.L., con NIF B02791382, y con domicilio a efecto
@@ -666,7 +682,7 @@ const Cookies = () => {
             facultados para contratar servicios aquellos Usuarios registrados
             mayores de 18 años que dispongan de la capacidad legal necesaria.
           </div>
-          <>
+          <div>
             <br />| Vector de Negocios creado por vectorpouch -{" "}
             <span className="underline">www.freepik.es.</span> <br /> <br />{" "}
             XII. PROPIEDAD INTELECTUAL E INDUSTRIAL. Happy Vecinos por sí o como
@@ -700,8 +716,8 @@ const Cookies = () => {
             intelectual, deberá comunicarlo inmediatamente a Happy Vecinos a
             través de los datos de contacto del apartado de INFORMACIÓN GENERAL
             de este Aviso Legal y Condiciones Generales de Uso.
-          </>
-        </>
+          </div>
+        </div>
       </section>
       <footer className="bg-[#1f2937] py-5 px-20 mt-10">
         {/* links */}

@@ -24,7 +24,7 @@ import {
 } from "./components/ui/dropdown-menu";
 import { ChevronDown } from "lucide-react";
 import Contact from "./components/contact/Contact";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function Home() {
   const [progress, setProgress] = useState(13);
@@ -81,7 +81,7 @@ function Home() {
   return (
     <>
       {(!loading && loaded) || (loading && loaded) ? (
-        <div className=" bg-white flex flex-col container p-0 scroll-smooth">
+        <div className=" bg-[#f9fafc] flex flex-col container p-0 scroll-smooth">
           {/* <div className=" flex w-full flex-col justify-center   items-start ">
             <div className="justify-between items-center flex w-full py-3 px-3 gap-5  max-md:flex-wrap bg-[#D5615F]">
               <div className="items-stretch flex gap-2 my-auto">
@@ -184,12 +184,12 @@ function Home() {
               </div>
             </div>
           )} */}
-          <nav className="bg-[#bd6260] py-4 sticky top-0 z-[999] text-white">
+          <nav className="bg-[#bd6260] py-4 sticky top-0 z-[999] text-white shadow-2xl shadow-gray-300 ">
             <div className="container mx-auto flex items-center justify-between ">
               <div className="flex items-center space-x-4">
-                <Link to="/">
+                <a href="#">
                   <img src={logo} className="w-16 h-16" />
-                </Link>
+                </a>
               </div>
               <div className="hidden md:flex items-center text-center ">
                 <a className=" border-r-2 px-3 " href="#">
@@ -198,10 +198,10 @@ function Home() {
                 <a className=" border-r-2 px-3 " href="#price">
                   Precios
                 </a>
-                <a className=" border-r-2 px-3 " href="#faq">
+                <a className=" border-r-2 px-3 " href="#contact">
                   ¿En qué podemos ayudar?
                 </a>
-                <a className=" border-r-2 px-3 " href="#contact">
+                <a className=" border-r-2 px-3 " href="#reviews">
                   Conócenos
                 </a>
               </div>
@@ -249,13 +249,13 @@ function Home() {
           <div className="" id="contact">
             <Contact />
           </div>
-          <div className="px-10 mb-10" id="faq">
+          <div className="px-10" id="faq">
             <p className="text-center text-3xl font-bold mb-16 mt-28">
               Preguntas frecuentes
             </p>
             <AccordionDemo className="" />
           </div>
-          <div className="my-16">
+          <div className="mb-16 pt-28" id="reviews">
             <TwentyFour />
           </div>
           <div className="my-16">
@@ -266,7 +266,7 @@ function Home() {
       ) : loading && !loaded ? (
         <div className="bg-white w-full h-screen flex flex-col items-center justify-center">
           <div className="w-[60%]">
-            <Progress value={progress} className=" w-full" />
+            <Progress value={progress} className="border-none w-full" />
             <div className="flex justify-between">
               <p className="mt-2">intrando al club</p>
               <p className="mt-2">{progress}%</p>
