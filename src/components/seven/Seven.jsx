@@ -7,7 +7,7 @@ import six from "../../assets/img/6.png";
 
 export default function Seven() {
   return (
-    <div className="bg-white">
+    <div className="bg-white my-12">
       <div className="max-w-7xl mx-auto px-4  py-12">
         <h1 className="text-4xl font-bold text-gray-900">
           Tu tiempo es valioso

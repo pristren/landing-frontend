@@ -228,22 +228,39 @@ function Home() {
             </div>
           </nav>
           <One />
+          <div
+            className="my-20 
+          "
+          >
+            <Five />
+          </div>
           <Seven />
+          <div
+            className="my-20 
+          "
+          >
+            <Five2 />
+          </div>
           <Eleven />
-          <Five />
-          <Five2 />
-          <Fourteen />
+
+          <div className="my-20">
+            <Fourteen />
+          </div>
           <div className="" id="contact">
             <Contact />
           </div>
-          <div className="px-10 " id="faq">
+          <div className="px-10 mb-10" id="faq">
             <p className="text-center text-3xl font-bold mb-16 mt-28">
               Preguntas frecuentes
             </p>
             <AccordionDemo className="" />
           </div>
-          <TwentyFour />
-          <TweentySix />
+          <div className="my-16">
+            <TwentyFour />
+          </div>
+          <div className="my-16">
+            <TweentySix />
+          </div>
           <Footer />
         </div>
       ) : loading && !loaded ? (
