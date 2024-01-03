@@ -27,18 +27,18 @@ const Cookies = () => {
             </Link>
           </div>
           <div className="hidden md:flex items-center text-center ">
-            <a className=" border-r-2 px-3 " href="#">
+            <Link className=" border-r-2 px-3 " href="/#">
               Funcionalidad
-            </a>
-            <a className=" border-r-2 px-3 " href="#price">
+            </Link>
+            <Link className=" border-r-2 px-3 " href="/#price">
               Precios
-            </a>
-            <a className=" border-r-2 px-3 " href="#faq">
+            </Link>
+            <Link className=" border-r-2 px-3 " href="#faq">
               ¿En qué podemos ayudar?
-            </a>
-            <a className=" border-r-2 px-3 " href="#contact">
+            </Link>
+            <Link className=" border-r-2 px-3 " to="/#contact">
               Conócenos
-            </a>
+            </Link>
           </div>
           <div className="flex items-center space-x-3">
             {/* <p className="  underline ">Español</p> */}

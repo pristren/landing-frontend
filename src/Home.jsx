@@ -24,6 +24,7 @@ import {
 } from "./components/ui/dropdown-menu";
 import { ChevronDown } from "lucide-react";
 import Contact from "./components/contact/Contact";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [progress, setProgress] = useState(13);
@@ -186,8 +187,9 @@ function Home() {
           <nav className="bg-[#bd6260] py-4 sticky top-0 z-[999] text-white">
             <div className="container mx-auto flex items-center justify-between ">
               <div className="flex items-center space-x-4">
-                <img src={logo} className="w-16 h-16" />
-                <h2 className="text-xl font-semibold">Happy Vecinos</h2>
+                <Link to="/">
+                  <img src={logo} className="w-16 h-16" />
+                </Link>
               </div>
               <div className="hidden md:flex items-center text-center ">
                 <a className=" border-r-2 px-3 " href="#">

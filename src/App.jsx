@@ -6,6 +6,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/home" element={<Home />}></Route>
         <Route path="/cookies" element={<Cookies />} />
       </Routes>
     </BrowserRouter>
