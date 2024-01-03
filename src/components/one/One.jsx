@@ -3,52 +3,6 @@ import bg from "../../assets/img/bg.png";
 export default function One() {
   return (
     <div className="bg-white container">
-      <nav className="bg-white py-4">
-        <div className="container mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <h2 className="text-xl font-semibold">Happy Vecinos</h2>
-          </div>
-          <div className="hidden md:flex items-center text-center ">
-            <a
-              className="text-gray-600 border-r-2 px-3 hover:text-gray-800"
-              href="#"
-            >
-              Funcionalidad
-            </a>
-            <a
-              className="text-gray-600 border-r-2 px-3 hover:text-gray-800"
-              href="#"
-            >
-              Precios
-            </a>
-            <a
-              className="text-gray-600 border-r-2 px-3 hover:text-gray-800"
-              href="#"
-            >
-              ¿En qué podemos ayudar?
-            </a>
-            <a
-              className="text-gray-600 border-r-2 px-3 hover:text-gray-800"
-              href="#"
-            >
-              Conócenos
-            </a>
-          </div>
-          <div className="flex items-center space-x-3">
-            <p className="text-gray-600 hover:text-gray-800 underline ">
-              Español
-            </p>
-
-            <Button
-              className="bg-blue-600 hover:bg-blue-600 hover:text-white  text-white"
-              variant="outline"
-            >
-              {" "}
-              Inicia sesión
-            </Button>
-          </div>
-        </div>
-      </nav>
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-12">
           <div className="space-y-8">

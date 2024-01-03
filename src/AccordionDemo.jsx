@@ -10,7 +10,7 @@ export function AccordionDemo() {
     <Accordion
       type="single"
       collapsible
-      className="w-full space-y-3"
+      className="w-full space-y-3 mt-20"
       defaultValue="item-1"
     >
       <AccordionItem value="item-1">

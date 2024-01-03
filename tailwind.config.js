@@ -21,6 +21,9 @@ module.exports = {
       colors: {
         primary: "#4182fa",
       },
+      listStyleType: {
+        roman: "upper-roman",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
