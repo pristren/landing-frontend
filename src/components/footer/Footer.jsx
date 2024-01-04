@@ -21,7 +21,7 @@ const Footer = () => {
             <a href="#">Iniciar sesión</a>
           </li>
           <li>
-            <a href="#" className="underline">
+            <a href="#price" className="underline">
               Precios
             </a>
           </li>
@@ -30,7 +30,7 @@ const Footer = () => {
         <ul className="space-y-3 mt-8 md:mt-0">
           <li className="text-[#69707e] font-medium">SOBRE NOSOTROS</li>
           <li>
-            <a href="#" className="underline">
+            <a href="#reviews" className="underline">
               Conócenos
             </a>
           </li>
