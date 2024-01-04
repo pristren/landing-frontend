@@ -264,10 +264,10 @@ function Home() {
           <Footer />
         </div>
       ) : loading && !loaded ? (
-        <div className="bg-white w-full h-screen flex flex-col items-center justify-center">
+        <div className="bg-black w-full h-screen flex flex-col items-center justify-center">
           <div className="w-[60%]">
             <Progress value={progress} className="border-none w-full" />
-            <div className="flex justify-between">
+            <div className="flex justify-between text-white">
               <p className="mt-2">intrando al club</p>
               <p className="mt-2">{progress}%</p>
             </div>
